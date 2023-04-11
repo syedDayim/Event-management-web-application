@@ -1,0 +1,13 @@
+{% load static %}
+<nav class="navbar">
+    <a href="{% url 'homepage' %}"><img src={% static 'homepage/images/LOGO.png' %} alt="" width="50"></a>
+    <ul class="nav-links">
+        <li><a href="{% url 'learn' %}">Learn</li>
+        <li><a href="{% url 'events' %}">Events</li>
+        <p class="nav-link-saperator"> | </p>
+        <li><a class="cuk-redirect-link" href="https://www.cukashmir.ac.in/" target="_blank">CUK Website</a></li>
+        <p class="nav-link-saperator"> | </p>
+        <li>Login</li>
+        <li>signup<li>
+    </ul>
+</nav>

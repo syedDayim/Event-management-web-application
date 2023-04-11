@@ -1,0 +1,46 @@
+.navbar{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    /* border: 2px solid red; */
+    height: 90px;
+    background-color: #191919;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.navbar a{
+    margin-right: auto;
+}
+
+/* .cuk-redirect-link{
+    border: 2px solid red;
+    
+} */
+.navbar > ul > li > a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+/* links (as a whole) */
+.navbar > .nav-links{
+    list-style: none;
+    display: inline-flex
+}
+
+/* links (each) */
+.navbar > ul > li{
+    /* border: 2px solid green; */
+    margin-right: 10px;
+}
+
+
+
+.nav-link-saperator{
+    margin-right: 10px;
+    color: #919191;
+    
+}
