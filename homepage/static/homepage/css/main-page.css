@@ -1,0 +1,137 @@
+html{
+    font-family: inter;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212121;
+    padding: 30px;
+    margin-top: 130px;
+}
+
+
+.intro-heading{
+    font-family: inter;
+    color: #20B2FF;
+    
+}
+.intro-heading > h1{
+    margin-bottom: 5px;
+    
+}
+.intro-heading > p{
+    margin-bottom: 15px;
+    
+}
+.event-btn{
+    border: 0;
+    font-family: inter;
+    font-weight: 900;
+    font-size: 600;
+    padding: 20px 33px 20px 33px;
+    border-radius: 12px;
+    background-color: #2AC17F;
+    color: #FFFFFF;
+}
+
+.intro-heading > .event-btn{
+    border: 0;
+    font-family: inter;
+    font-weight: 900;
+    font-size: 600;
+    padding: 20px 33px 20px 33px;
+    border-radius: 12px;
+    background-color: #2AC17F;
+    color: #FFFFFF;
+}
+
+
+
+
+/* Main Div 2 */
+
+.banner-image{
+    width: 100%;
+    height: auto;
+}
+
+.contest-interface{
+    background-color: #252525;
+}
+
+
+.contest-interface > .event-btn{
+   margin-left: 40px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+
+/* home- learn- section */
+.learn-section{
+    background-color: #212121;
+    color: #FFFFFF;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px 0px 40px; 
+}
+.learn-section-info > h2{
+    text-decoration: underline;
+    margin-bottom: 14px;
+}
+
+.home-learn-image{
+    /* width: auto;
+    height: auto; */
+}
+
+.heading{
+    /* border: 2px solid red; */
+    width: 400px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.scholar-icon{
+    width: 60px;
+    height: 60px;
+}
+.learn-img{
+    /* border: 2px solid red; */
+}
+
+.compete{
+    background-color: #252525;
+    color: #FFFFFF;
+}
+
+
+.compete-container{
+   border: 2px solid red;
+   width: 50%;
+   padding-left: 40px;
+}
+.contes-detials{
+    text-align: left;
+}
+
+.heading2{
+    /* border: 2px solid red; */
+    justify-content: left;
+}
+.heading2 > div{
+    /* border: 2px solid red; */
+   margin-left: 17px;
+}
+
+.learn-section2{
+    background-color: #252525;
+    height:auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

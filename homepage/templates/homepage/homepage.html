@@ -2,4 +2,98 @@
 
 {% load static %}
 
-{% block mainpage %}Hello{% endblock mainpage %}Hello
+{% block mainpage %}
+{% comment %} first div {% endcomment %}
+<div class="intro">
+    <div class="intro-heading">
+        <h1>ITVENT</h1>
+        <p>Never miss your favourite event.</p>
+        <button class="event-btn">Know more about ITVENTS </button>
+    </div>
+
+    <div class="programing-box">
+        <img src="{% static 'homepage/images/prog-box.png' %}" alt="prog-box" width='450'>
+    </div>
+    
+</div>
+{% comment %} first div end here {% endcomment %}
+
+
+{% comment %} second div starts {% endcomment %}
+<div class="contest-interface">
+    <div class="banner-container">
+        <img class="banner-image" src="{% static 'homepage/images/cntst-banner.png' %}" alt="" >
+    </div>
+    <button class="event-btn">Learn more about the contest</button>
+    
+
+</div>
+
+{% comment %} second div ends here {% endcomment %}
+
+
+
+{% comment %} learn div sarts here {% endcomment %}
+
+<div class="learn-section">
+    <div class="learn-section-info">
+        <h2>Learn</h2>
+
+        <div class="heading">
+            <img class="scholar-icon"src="{% static 'homepage/images/icons/scholar-icon.png' %}" alt="" width='70'>
+            <div>
+                <h3>Learn new programming languages</h3>
+            <p>Start learning Python, React, Git and more</p>
+            </div>
+            
+        </div>
+
+        <button class="event-btn">Go to learn</button>
+
+
+    </div>
+
+    <div class="learn-img">
+        <img class="home-learn-image" src="{% static 'homepage/images/image 3.png' %}" alt="" width="300">
+    </div>
+</div>
+{% comment %} learn div sarts here {% endcomment %}
+
+<div class="learn-section learn-section2">
+    <div class="learn-section-info">
+        <h2>Compete</h2>
+
+        <div class="heading heading2">
+            <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
+            <div>
+            <h3>Umer the coder</h3>
+            <p>21 April 2024, 12:00 PM</p>
+            </div>
+            
+        </div>
+        <div class="heading heading2">
+            <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
+            <div>
+            <h3>Details</h3>
+            <ul>
+                <li>Compete with numerous coding enthusiasts.</li>
+                <li>Participate in 6+ contests each month, on every Wednesday and the Weekends.</li>
+                <li>Compete using your favorite language.</li>
+                <li>Earn Certifications and Trophies</li>
+            </ul>
+            </div>
+            
+        </div>
+
+        <button class="event-btn">Register</button>
+
+
+    </div>
+
+    <div class="learn-img">
+        <img class="home-learn-image" src="{% static 'homepage/images/image 3.png' %}" alt="" width="300">
+    </div>
+</div>
+
+
+{% endblock mainpage %}Hello
