@@ -1,0 +1,42 @@
+.footer{
+    /* border: 2px solid red; */
+    height: 200px;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: inter;
+    display: flex;
+    padding: 25px;
+
+  
+    
+}
+.contact-us{
+    /* border: 2px solid red; */
+    /* display: inline-block; */
+    margin-right: 20px;
+    padding-top: 30px;
+}
+.contact-us > h3{
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+
+.follow-us{
+    /* border: 2px solid green; */
+    padding-top: 30px;
+    text-decoration: underline;
+    width: 250px;
+    /* display: inline-block; */
+
+
+}
+
+.follow-us > h3 {
+    margin-bottom: 15px;
+}
+
+.social-media-container{
+    display: flex;
+    justify-content: space-evenly;
+}
