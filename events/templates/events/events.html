@@ -1,3 +1,77 @@
 {% extends 'homepage/base.html' %}
+{% load static %}
+{% block styleblock %} <link rel="stylesheet" href="{% static 'events/css/event-style.css' %}"> {% endblock styleblock %} 
 
-{% block mainpage %}This is events page{% endblock mainpage %}
+
+
+{% block mainpage %}
+
+<div class="event-container">
+    <img src="{% static 'events/images/banner.png' %}" widthalt="">
+
+    <div class="event-button-container">
+        
+    </div>
+
+
+
+    <div class="contest-details">
+        <h2 class="contest-title">UmerTheCoder Contest</h2>
+        <p class="contest-date">April 18, 2023</p>
+        <p class="contest-duration">Duration: 3 days</p>
+        <h3 class="section-title">Eligibility</h3>
+        <p class="section-content">The contest is open to all participants aged 18 and above.</p>
+        <h3 class="section-title">Rules</h3>
+        <ul class="section-content">
+          <li>Participants must submit their entries by the deadline.</li>
+          <li>Entries must be original and not violate any copyright laws.</li>
+          <li>Participants can submit multiple entries, but only one entry will be eligible for a prize.</li>
+        </ul>
+        <h3 class="section-title">Prizes</h3>
+        <ul class="section-content">
+          <li>1st Place: Certificat and Trophy</li>
+          <li>2nd Place: Certificat and Trophy</li>
+          <li>3rd Place: Certificat and Trophy</li>
+        </ul>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+    <div class="registration-form">
+        <h2>Event Registration</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name }}
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+            <label for="{{ form.semester.id_for_label }}">Semester:</label>
+            {{ form.semester }}
+            <label for="{{ form.enrollment_no.id_for_label }}">Enrollment No:</label>
+            {{ form.enrollment_no }}
+            <label for="{{ form.enrollment_no.id_for_label }}">Department:</label>
+            {{ form.department }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock mainpage %}

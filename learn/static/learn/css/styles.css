@@ -18,10 +18,22 @@
 
 .card-container{
    display: flex;
-   padding: 30px;
+   padding-top: 60px;
+
+   padding-right: 50px;
+   padding-left: 40px;
+
+   padding-bottom: 60px;
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
    background-color: #252525;
+   gap: 13px;
 }
 
+.card > h2, .card > p{
+    color: #d7d7d7;
+}
+.course-link{
+    color: red;
+}

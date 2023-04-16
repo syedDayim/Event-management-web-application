@@ -17,80 +17,102 @@
 
 <div class="card-container">
 
-    <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/react.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
+
+  {% comment %} react card {% endcomment %}
+    <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/react.jpg' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
           <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
           <p style="margin: 8px 0; font-size: 15px;">Learn from scratch</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 15px;">Click Here</a>
+          <a href="https://github.com/Asabeneh/30-Days-Of-React" target="_blank" style="color: #007bff; text-decoration: none; font-size: 15px;">Click Here</a>
         </div>
       </div>
 
       
-
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/js.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
+{% comment %} js card {% endcomment %}
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/javascript.jpg' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
           <h2 style="margin: 8px 0; font-size: 24px;">30 Days of JavaScript</h2>
           <p style="margin: 8px 0; font-size: 16px;">Beginner freindly.</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+          <a href="https://github.com/Asabeneh/30-Days-Of-JavaScript" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
         </div>
       </div>
 
       
-
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/python.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+{% comment %} python card {% endcomment %}
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/py.png' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of Python</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Learn Python with projects.</p>
+          <a href="https://github.com/Asabeneh/30-Days-Of-Python" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
         </div>
       </div>
 
+    {% comment %} Git card {% endcomment %}
+
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">10 Days of Git</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Master Git and Github in 30 days!</p>
+          <a href="https://github.com/Asabeneh/10-days-of-git-and-github" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+        </div>
+      </div>
+
+{% comment %} HTML {% endcomment %}
+
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/html.png' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of HTML</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Learn HTML in 30 days!</p>
+          <a href="https://github.com/Asabeneh/30-Days-Of-HTML" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+        </div>
+      </div>
+
+
+
+
+      {% comment %} pandas card {% endcomment %}
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/pandas.png' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">Learn Pandas</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Learn python's pandas.</p>
+          <a href="https://github.com/Asabeneh/Pandas/blob/main/.ipynb_checkpoints/pandas-checkpoint.ipynb" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+        </div>
+      </div>
+
+
+
+{% comment %} Learn matplotlib {% endcomment %}
+
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/mat.jpeg' %}" alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">Learn Matplotlib</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Data visualisation with matplotlib</p>
+          <a href="https://github.com/Asabeneh/matplotlib/blob/master/.ipynb_checkpoints/Visualizations-checkpoint.ipynb" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+        </div>
+      </div>
+
+
+
+      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px;  border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+        <img src="{% static 'learn/images/ds.png' %}" alt="React" style="width: 200px; height: 140px; border-radius: 8px;">
+        <div class="card" style="text-align: center;">
+          <h2 style="margin: 8px 0; font-size: 24px;">Data Science</h2>
+          <p style="margin: 8px 0; font-size: 16px;">Introduction to Data science.</p>
+          <a class="course-link" href="https://github.com/HY-TKTL/intro-to-data-science-2017/wiki" target="_blank" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
+        </div>
+      </div>
       
 
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
-        </div>
-      </div>
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
-        </div>
-      </div>
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
-        </div>
-      </div>
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
-        </div>
-      </div>
-      <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border: 1px solid #ccc; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
-        <img src="{% static 'learn/images/gitgithub.png' %}" alt="React" style="width: 100px; height: 100px; border-radius: 8px;">
-        <div style="text-align: center;">
-          <h2 style="margin: 8px 0; font-size: 24px;">30 Days of React</h2>
-          <p style="margin: 8px 0; font-size: 16px;">Learn React in 30 days!</p>
-          <a href="#" style="color: #007bff; text-decoration: none; font-size: 16px;">Click Here</a>
-        </div>
-      </div>
-      
+
+
+
 
 
 </div>

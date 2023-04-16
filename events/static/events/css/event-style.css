@@ -1,0 +1,195 @@
+.event-container{
+    background-color: #212121;
+    margin-top: 130px;
+    /* border: 2px solid red; */
+    
+     /* Set the width of the div as needed */
+     /* Set the height of the div as needed */
+  
+}
+
+.event-container > img{
+    max-width: 100%; /* Make the image width fit into the div */
+    max-height: 100%; /* Make the image height fit into the div */
+    object-fit: cover;
+}
+
+.button {
+    background-color: #2AC17F;
+    font-family: inter;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.event-button-container{
+    padding: 30px;
+}
+
+.registration-form {
+    
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+
+    border-radius: 5px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color:#fff;
+    width: 100%;
+    font-family: inter;
+    padding: 20px;
+}
+
+.registration-form label,
+.registration-form input,
+.registration-form button {
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.registration-form label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.registration-form input,
+.registration-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.registration-form button {
+    width: auto;
+    background-color: #2331cde1;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    border: 0;
+    font-family: inter;
+    
+}
+
+.registration-form button:hover{
+    
+    
+    color: #fff;
+    cursor: pointer;
+    font-family: inter;
+    
+}
+
+
+
+
+
+
+
+
+
+  /* Container for contest details */
+  .contest-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    line-height: 30px;
+  }
+
+  /* Contest title */
+  .contest-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  /* Contest information */
+  .contest-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  /* Contest date and duration */
+  .contest-date, .contest-duration {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #777;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+
+  /* Section content */
+  .section-content {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #555;
+  }
+
+  /* Section content list items */
+  .section-content li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Section content bullet points */
+  .section-content li:before {
+    content: "\25A0"; /* Add square bullet point */
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+    color: #777;
+  }
+
+  /* Prizes list */
+  .section-content ul {
+    padding-left: 20px;
+  }
+
+  /* Prize items */
+  .section-content li ul li {
+    list-style-type: square;
+    margin-bottom: 0;
+    color: #555;
+  }
+
+  /* Prize amounts */
+  .section-content li ul li:before {
+    content: "";
+    display: none; /* Remove bullet point */
+  }
