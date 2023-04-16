@@ -49,17 +49,17 @@
         <h2>Event Registration</h2>
         <form method="post">
             {% csrf_token %}
-            <label for="{{ form.name.id_for_label }}">Name:</label>
+            <label id="form-feild" placeholder="hello" for="{{ form.name.id_for_label }}"><span class="form-name">Name:</span></label>
             {{ form.name }}
-            <label for="{{ form.email.id_for_label }}">Email:</label>
+            <label id="form-feild" for="{{ form.email.id_for_label }}"><span class="form-name">Email:</span></label>
             {{ form.email }}
-            <label for="{{ form.semester.id_for_label }}">Semester:</label>
+            <label id="form-feild" for="{{ form.semester.id_for_label }}"><span class="form-name">Semester:</span></label>
             {{ form.semester }}
-            <label for="{{ form.enrollment_no.id_for_label }}">Enrollment No:</label>
+            <label id="form-feild" for="{{ form.enrollment_no.id_for_label }}"><span class="form-name">Enrollment No:</span></label>
             {{ form.enrollment_no }}
-            <label for="{{ form.enrollment_no.id_for_label }}">Department:</label>
-            {{ form.department }}
-            <button type="submit">Register</button>
+            <label id="form-feild" for="{{ form.enrollment_no.id_for_label }}"><span class="form-name">Department:</span></label>
+            {{ form.department }}</span>
+            <button type="submit"><span class="form-name">Register</button>
         </form>
     </div>
 

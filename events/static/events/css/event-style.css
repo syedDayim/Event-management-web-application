@@ -49,7 +49,6 @@
 .registration-form label,
 .registration-form input,
 .registration-form button {
-    color: #fff;
     display: block;
     width: 100%;
     margin-bottom: 10px;
@@ -84,8 +83,13 @@
     font-family: inter;
     
 }
+#form-feild::placeholder{
+  color: black;
+}
 
-
+.form-name{
+  color: white;
+}
 
 
 
