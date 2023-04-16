@@ -1,0 +1,27 @@
+.learn-header{
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #212121;
+}
+.learn-heading > h1{
+    color: #20B2FF;
+    text-decoration: underline;
+}
+
+.learn-heading > p {
+    color: #20B2FF;
+}
+
+
+.card-container{
+   display: flex;
+   padding: 30px;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   background-color: #252525;
+}
+
