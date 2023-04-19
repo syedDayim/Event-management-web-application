@@ -1,12 +1,15 @@
 .event-container{
     background-color: #212121;
     margin-top: 130px;
+    padding-bottom: 50px;    
     /* border: 2px solid red; */
     
      /* Set the width of the div as needed */
      /* Set the height of the div as needed */
   
 }
+
+
 
 .event-container > img{
     max-width: 100%; /* Make the image width fit into the div */
@@ -25,175 +28,174 @@
     cursor: pointer;
 }
 
-.event-button-container{
-    padding: 30px;
+
+
+.contest{
+  font-family: inter;
+  border-radius: 4px;
+  border: 2px solid cadetblue;
+  border-top: 2px;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+  padding-bottom: 30px;
 }
 
-.registration-form {
-    
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 50px;
 
-    border-radius: 5px;
+.main{
+  /* border: 2px solid rgb(43, 255, 0); */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(36, 32, 32);
+  background-color: cadetblue;
 }
 
-.registration-form h2 {
-    text-align: center;
-    color:#fff;
-    width: 100%;
-    font-family: inter;
-    padding: 20px;
+
+.body{
+  padding: 20px;
 }
 
-.registration-form label,
-.registration-form input,
-.registration-form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
+.body > ul > li{
+  padding: 5px;
+  color: #FFF;
+  
+ 
 }
 
-.registration-form label {
-    font-family: Arial, Helvetica, sans-serif;
+
+/* 
+.form-container {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: auto;
+  padding: 20px;
+ 
+  margin-top:30px;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.registration-form input,
-.registration-form button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.form-container input[type="text"],
+.form-container input[type="email"] {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 50px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.registration-form button {
-    width: auto;
-    background-color: #2331cde1;
-    color: rgb(255, 255, 255);
-    padding: 12px;
-    border: 0;
-    font-family: inter;
-    
+.form-container input[type="text"]::placeholder,
+.form-container input[type="email"]::placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
 }
 
-.registration-form button:hover{
-    
-    
-    color: #fff;
-    cursor: pointer;
-    font-family: inter;
-    
-}
-#form-feild::placeholder{
-  color: black;
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus {
+  outline: none;
+  background-color: #303245;
+  color: #eee;
+  border-color: #dc2f55;
+  box-shadow: 0px 0px 4px #dc2f55;
 }
 
-.form-name{
+.form-container input[type="text"]:focus::placeholder,
+.form-container input[type="email"]:focus::placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  color: #dc2f55;
+}
+
+.form-container input[type="text"]:not(:placeholder-shown):invalid,
+.form-container input[type="email"]:not(:placeholder-shown):invalid {
+  border-color: #dc2f55;
+  box-shadow: 0px 0px 4px #dc2f55;
+}
+
+.form-container input[type="submit"] {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.form-container input[type="submit"]:active {
+  background-color: #06b;
+}
+
+.form-container th,
+.form-container td {
+  padding: 10px;
+}
+ */
+
+
+
+ .form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #f1f1f1; */
+  border-radius: 5px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+}
+
+.form-container input[type=text], 
+.form-container input[type=email] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+.form-container input[type=submit] {
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-
-
-
-
-
-
-  /* Container for contest details */
-  .contest-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    line-height: 30px;
-  }
-
-  /* Contest title */
-  .contest-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0 0 20px;
-    color: #333;
-    text-decoration: underline;
-  }
-
-  /* Contest information */
-  .contest-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  /* Contest date and duration */
-  .contest-date, .contest-duration {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #777;
-  }
-
-  /* Sections */
-  .section {
-    margin-bottom: 20px;
-    width: 100%;
-  }
-
-  /* Section title */
-  .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 10px;
-    color: #333;
-    text-transform: uppercase;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-  }
-
-  /* Section content */
-  .section-content {
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    color: #555;
-  }
-
-  /* Section content list items */
-  .section-content li {
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-  }
-
-  /* Section content bullet points */
-  .section-content li:before {
-    content: "\25A0"; /* Add square bullet point */
-    display: inline-block;
-    width: 1em;
-    margin-right: 10px;
-    color: #777;
-  }
-
-  /* Prizes list */
-  .section-content ul {
-    padding-left: 20px;
-  }
-
-  /* Prize items */
-  .section-content li ul li {
-    list-style-type: square;
-    margin-bottom: 0;
-    color: #555;
-  }
-
-  /* Prize amounts */
-  .section-content li ul li:before {
-    content: "";
-    display: none; /* Remove bullet point */
-  }
+.form-container input[type=submit]:hover {
+  background-color: #3e8e41;
+}
