@@ -9,10 +9,9 @@ def registrationSuccess(request):
 
 def events(request):
     if request.method == 'POST':
-        form = EventRegistrationForm(request.POST)  
+        form = EventRegistrationForm(request.POST)
         if form.is_valid():
             return HttpResponseRedirect('sucess/')
     else:
         form = EventRegistrationForm()
-    # HttpResponseRedirect('/events/success')
-    return render(request, 'events/events.html', {'form': form})
+    return render(request, 'events/events.html',{'form': form})
