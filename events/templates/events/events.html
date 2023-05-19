@@ -14,19 +14,23 @@
 
 {% block mainpage %}
 
+
+{% if event%}
+
 <div class="event-container">
-  <img src="{% static 'events/images/banner.png' %}" widthalt="" />
+  <img src="{{ event.image.url}}" width="6000" />
+  
 
   <div class="contest">
-    <div class="acb">
+    
       <div class="main">
-        <h2>UmerTheCoder <i class="fa-solid fa-code"></i></h2>
+        <h2>{{ event.title }} <i class="fa-solid fa-code"></i></h2>
       </div>
 
       <div class="body">
         <ul>
-          <li>April 18, 2023</li>
-          <li>Duration: 3 days</li>
+          <li>{{ event.month }} {{ event.day }}, {{ event.year }}</li>
+          <li>Duration: {{ event.duration }}</li>
         </ul>
       </div>
       {% comment %} ----------------------------------- {% endcomment %}
@@ -36,7 +40,7 @@
 
       <div class="body">
         <ul>
-          <li>You must know atleat 1 programming language.</li>
+          <li>{{ event.eligibility }}</li>
         </ul>
       </div>
       {% comment %} ----------------------------------------- {% endcomment %}
@@ -45,6 +49,7 @@
         <h2>Rules <i class="fa-solid fa-check"></i></h2>
       </div>
 
+      
       <div class="body">
         <ul>
           <li>Participants must submit their entries by the deadline.</li>
@@ -58,15 +63,18 @@
       {% comment %} ------------------------------------- {% endcomment %}
 
       <div class="main">
-        <h2>Prices <i class="fa-solid fa-trophy"></i></h2>
+        <h2>Prize <i class="fa-solid fa-trophy"></i></h2>
       </div>
+
 
       <div class="body">
         <ul>
-          <li>Certifications and Trophies to first 3 rank holders.</li>
+          <li>{{ event.prize }}</li>
         </ul>
       </div>
-    </div>
+
+
+    
 
 
     <div class="main">
@@ -76,22 +84,28 @@
     {% comment %} Contest Info ends {% endcomment %}
 
 
+
+    {% comment %} form section starts {% endcomment %}
     <div class="form-container">
-
       <form action="" method="POST">
-
         {% csrf_token %}
-
-        
           {{ form.as_p }}
-        
-
         <input type="submit" value="Submit" />
       </form>
     </div>
+    {% comment %} form section ends {% endcomment %}
+
   </div>
 
 
 </div>
+{% else %}
+  <div class="event-container-false">
+    <img src="{% static 'events/images/no events.png' %}" alt="" width="300px">
+  </div>
+{% endif %}
+
+
+
 
 {% endblock mainpage %}

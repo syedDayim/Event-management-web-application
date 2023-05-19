@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .models import EventRegistration
+from .models import EventRegistration, Event
 from .forms import EventRegistrationForm
 
 # Create your views here.
@@ -22,4 +22,10 @@ def events(request):
             return HttpResponseRedirect('sucess/')
     else:
         form = EventRegistrationForm()
-    return render(request, 'events/events.html',{'form': form})
+    event = Event.objects.first()  # Assuming you want to fetch the first event
+
+    context = {
+        'form': form,
+        'event': event,
+    }
+    return render(request, 'events/events.html', context)

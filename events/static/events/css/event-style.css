@@ -216,3 +216,22 @@
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+
+/* No event style */
+
+.event-container-false{
+  margin-top: 130px;
+  text-align: center;
+  background-color: #212121;
+  color: #fff;
+  font-family: inter;
+  padding-left: 30px;
+  height: 60vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: black;
+
+}
