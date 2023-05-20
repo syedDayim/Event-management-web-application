@@ -24,7 +24,7 @@
   {% for cor in course %}
 
   
-    <div style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
+    <div class="course-card-container" style="width: 300px; height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 16px; border-radius: 8px; margin-right: 16px; margin-bottom: 16px;">
       <img src={{ cor.cover.url }} alt="React" style="width: 200px; height: 300px; border-radius: 8px;">
         <div class="card" style="text-align: center;">
           <h2 style="margin: 8px 0; font-size: 24px;">{{ cor.title }}</h2>
