@@ -1,10 +1,13 @@
 from django.db import models
+from django.core.validators import RegexValidator
+
 
 class EventRegistration(models.Model):
     name = models.CharField(max_length=25)
     email = models.EmailField(max_length=100)
-    semester = models.IntegerField()
+    semester = models.CharField(max_length=1, validators=[RegexValidator(r'^[1-9]$|^10$')])
     enrolment_no = models.CharField(max_length=11)
+    contact_no = models.CharField(max_length=10, validators=[RegexValidator(r'^\d{10}$')], default='')
     department = models.CharField(max_length=100)
 
 class Event(models.Model):

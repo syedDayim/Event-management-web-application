@@ -16,8 +16,9 @@ def events(request):
             email = form.cleaned_data['email']
             semester = form.cleaned_data['semester']
             enrolment_no = form.cleaned_data['enrolment_no']
+            contact_no = form.cleaned_data['contact_no']
             department = form.cleaned_data['department']
-            register_data = EventRegistration(name=name, email=email, semester=semester, enrolment_no=enrolment_no, department=department)
+            register_data = EventRegistration(name=name, email=email, semester=semester, enrolment_no=enrolment_no, contact_no=contact_no, department=department)
             register_data.save()
             return HttpResponseRedirect('sucess/')
     else:
