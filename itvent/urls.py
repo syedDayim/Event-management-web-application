@@ -9,7 +9,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name='homepage'),
     path('events/', include('events.urls')),
-    path('learn/', include('learn.urls'))
+    path('learn/', include('learn.urls')),
+    path('aboutus/', include('homepage.urls')),
+
 ]
 
 

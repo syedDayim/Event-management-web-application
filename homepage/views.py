@@ -9,3 +9,6 @@ def homepage(request):
         'event': event,
     }
     return render(request, 'homepage/homepage.html',context)
+
+def aboutus(request):
+    return render(request, 'homepage/know.html', {})

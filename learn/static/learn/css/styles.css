@@ -1,5 +1,5 @@
 .learn-header{
-    margin-top: 130px;
+    margin-top: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,8 +39,9 @@
 }
 
 .course-card-container {
-    transition: transform 0.4s ease-in-out; /* Add transition property */
-  }
+    transition: transform 0.4s 
+
+}
   
   .course-card-container:hover {
     transform: rotate(-5deg); /* Apply rotation */

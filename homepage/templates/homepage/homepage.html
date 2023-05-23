@@ -3,104 +3,111 @@
 {% load static %}
 
 {% block mainpage %}
-{% comment %} first div {% endcomment %}
+{% comment %} Intro div {% endcomment %}
 <div class="intro">
     <div class="intro-heading">
         <h1>ITVENT</h1>
         <p>Never miss your favourite event.</p>
-        <button class="event-btn">Know more about ITVENTS </button>
+        <button class="event-btn"><a style="text-decoration: none; color: #ffffff;" href="{% url 'know more' %}">Know more about ITVENTS</a> </button>
     </div>
-
+    
     <div class="programing-box">
         <img src="{% static 'homepage/images/prog-box.png' %}" alt="prog-box" width='450'>
     </div>
+</div>
+{% comment %} iintro div ends {% endcomment %}
+
+
+{% comment %} event div starts {% endcomment %}
+{% if event%}
+<div class="event-show-banner">
+    <img class="banner-image" src={{ event.image.url }} alt="" >
+    
+    {% comment %} Right content here {% endcomment %}
+    <div class="learn-section learn-section2"
+        style="
+            margin-right: 40px;
+            background-color: #212121;
+        ">
+        <div class="learn-section-info">
+            <h2>Compete</h2>
+    
+            <div class="heading heading2">
+                <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
+                
+                <div>
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.day }} {{ event.month }} {{ event.year }}, {{ event.duration }}</p>
+                </div>
+                
+    
+                
+               
+                
+            </div>
+            <div class="heading heading2">
+                <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
+                <div>
+                <h3>Details</h3>
+                <ul>
+                    <li>Compete with numerous coding enthusiasts.</li>
+                    <li>Compete using your favorite language.</li>
+                    <li>Earn Certifications and Trophies</li>
+                </ul>
+                </div>
+                
+            </div>
+    
+            <button class="event-btn"><a style="text-decoration: none; color: #ffffff;" href="{% url 'events' %}">Register</a></button>
+        </div>
+    </div>
+
     
 </div>
-{% comment %} first div end here {% endcomment %}
 
+{% else %}
 
-{% comment %} second div starts {% endcomment %}
-<div class="contest-interface">
-    <div class="banner-container">
-        {% if event %}
-        <img class="banner-image" src={{ event.image.url }} alt="" >
-    </div>
-    <button class="event-btn"><a style="text-decoration: none; color: #ffffff;" href="{% url 'events' %}">Learn More</a></button>
-    {% endif %}
-
+<div class="no-contest">
+    <h1><span class="red">&lt;</span> No contest available right now, STAY TUNED <span class="red">&sol;&gt;</span></h1>
 </div>
 
-{% comment %} second div ends here {% endcomment %}
+
+{%endif%}
+{% comment %} Event div ends here {% endcomment %}
 
 
 
-{% comment %} learn div sarts here {% endcomment %}
 
-<div class="learn-section">
-    <div class="learn-section-info">
-        <h2>Learn</h2>
 
-        <div class="heading">
-            <img class="scholar-icon"src="{% static 'homepage/images/icons/scholar-icon.png' %}" alt="" width='70'>
-            <div>
-                <h3>Learn new programming languages</h3>
-            <p>Start learning Python, React, Git and more</p>
-            </div>
-            
-        </div>
 
-        <button class="event-btn" ><a style="text-decoration: none; color: #ffffff;" href="{% url 'learn' %}">Go to learn</a></button>
-        
+    
+{% comment %} {% endif %} {% endcomment %}
 
-    </div>
-
-    <div class="learn-img">
-        <img class="home-learn-image" style="border-radius: 5px;" src="{% static 'homepage/images/learn icon.png' %}" alt="" width="300">
-    </div>
-</div>
-{% comment %} learn div sarts here {% endcomment %}
-
-<div class="learn-section learn-section2">
-    <div class="learn-section-info">
-        <h2>Compete</h2>
-
-        <div class="heading heading2">
-            {% if event %}
-            <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
-            
-            <div>
-            <h3>{{ event.title }}</h3>
-            <p>{{ event.day }} {{ event.month }} {{ event.year }}, {{ event.duration }}</p>
-            </div>
-            {% else %}
-
-            <h4 style="color: Yellow;">No Contest available right now</h4>
-
-            {% endif %}
-            
-        </div>
-        <div class="heading heading2">
-            <img class="scholar-icon"src="{% static 'homepage/images/icons/trophy-icon.png' %}" alt="" width='70'>
-            <div>
-            <h3>Details</h3>
-            <ul>
-                <li>Compete with numerous coding enthusiasts.</li>
-                <li>Compete using your favorite language.</li>
-                <li>Earn Certifications and Trophies</li>
+<div class="learn-div">
+    
+    <div class="icons">
+        <ul>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616073951/Net%20Ninja%20Pro/svg/icons/html-logo_lfmuid.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074126/Net%20Ninja%20Pro/svg/icons/js-logo_gvosxg.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074122/Net%20Ninja%20Pro/svg/icons/flutter-logo_gl5iyt.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074128/Net%20Ninja%20Pro/svg/icons/react-logo_q2iuni.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074131/Net%20Ninja%20Pro/svg/icons/svelte-logo_lgisl0.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074127/Net%20Ninja%20Pro/svg/icons/node-logo_runwwy.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074133/Net%20Ninja%20Pro/svg/icons/typescript-logo_oldkpo.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074129/Net%20Ninja%20Pro/svg/icons/sapper-logo_pqplkk.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074124/Net%20Ninja%20Pro/svg/icons/gatsby-logo_chwupz.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074125/Net%20Ninja%20Pro/svg/icons/graphql-logo_xfmygj.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074123/Net%20Ninja%20Pro/svg/icons/framer-logo_joymgk.svg"></li>
+            <li><img src="https://res.cloudinary.com/net-ninja/image/upload/v1616074121/Net%20Ninja%20Pro/svg/icons/firebase-logo_kkewft.svg"></li>
             </ul>
-            </div>
-            
-        </div>
-
-        <button class="event-btn"><a style="text-decoration: none; color: #ffffff;" href="{% url 'events' %}">Register</a></button>
-
-
     </div>
 
-    <div class="learn-img">
-        <img class="home-learn-image"  style="border-radius: 5px;" src="{% static 'homepage/images/compete image.jpg' %}" alt="" width="300">
+    <div class="learn-things-container">
+        <p>stay up-to-date with latest technologies.</p>    
+        <button class="event-btn"><a style="text-decoration: none; color: #ffffff;" href="{% url 'learn' %}">Learn</a></button>
     </div>
+
 </div>
+  
 
-
-{% endblock mainpage %}Hello
+{% endblock mainpage %}

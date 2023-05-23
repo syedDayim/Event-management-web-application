@@ -1,13 +1,15 @@
 html{
     font-family: inter;
+    box-sizing: border-box;
 }
 .intro{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #212121;
-    padding: 30px;
-    margin-top: 130px;
+    background-color: #252525;
+    padding: 50px;
+    margin-top: 90px;
+    height: 250px;
 }
 
 
@@ -24,26 +26,64 @@ html{
     margin-bottom: 15px;
     
 }
-.event-btn{
+.event-btn {
+    position: relative;
+    overflow: hidden;
     border: 0;
     font-family: inter;
-    font-weight: 900;
-    font-size: 600;
-    padding: 20px 33px 20px 33px;
-    border-radius: 12px;
+    font-size: 16px;
+    padding: 13px 40px;
     background-color: #2AC17F;
     color: #FFFFFF;
-}
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .event-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    z-index: -1;
+  }
+  
+  .event-btn:hover {
+    background-color: transparent;
+    border: 2px solid #2AC17F;
+    padding: 11px 38px;
+  }
+  
+  .event-btn:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .event-btn:hover::after {
+    transform: scaleX(0);
+  }
+  
+  
 
 .intro-heading > .event-btn{
     border: 0;
     font-family: inter;
-    font-weight: 900;
+    /* font-weight: 900; */
     font-size: 600;
-    padding: 20px 33px 20px 33px;
-    border-radius: 12px;
+    padding: 13px 40px 13px 40px;
+    /* border-radius: 12px; */
     background-color: #2AC17F;
     color: #FFFFFF;
+}
+.intro-heading > .event-btn:hover{
+    border: 0;
+    background-color: #212121;
+    border: 2px solid #2AC17F;
+    padding: 11px 38px 11px 38px;
 }
 
 
@@ -52,21 +92,30 @@ html{
 /* Main Div 2 */
 
 .banner-image{
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: 60%;
+    margin-left: 40px;
 }
 
-.contest-interface{
-    background-color: #252525;
+.event-show-banner{
+    background-color: #212121;
+    display: flex;
+    height: 600px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-.contest-interface > .event-btn{
-   margin-left: 40px;
-   margin-top: 20px;
-   margin-bottom: 20px;
+.no-contest{
+    height: 600px;
+    background-color: #212121;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.red{
+    color: rgb(0, 255, 64);
+}
 
 /* home- learn- section */
 .learn-section{
@@ -77,10 +126,12 @@ html{
     align-items: center;
     justify-content: space-between;
     padding: 0px 40px 0px 40px; 
+    
 }
 .learn-section-info > h2{
     text-decoration: underline;
     margin-bottom: 14px;
+
 }
 
 .home-learn-image{
@@ -134,4 +185,56 @@ html{
     height:auto;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+/* Learn section */
+
+.learn-div{
+    height: 600px;
+    background-color:#252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 70px;
+}
+.learn-things-container{
+    /* border: 2px solid red; */
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+.learn-things-container > h2{
+    color: white;
+    
+}
+.learn-things-container > p{
+    color: white;
+}
+.icons ul{
+    display: flex;
+    gap: 15px;
+
+}
+.icons ul{
+    text-align: center;
+    margin: 50px auto 10px;
+    list-style:none;
+}
+
+@keyframes wiggly {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    60% { transform: rotate(3deg); }
+    80% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.icons li:hover {
+    animation: wiggly 0.5s infinite;
 }
