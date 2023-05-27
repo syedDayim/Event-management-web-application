@@ -1,0 +1,31 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block styleblock %}
+<link rel="stylesheet" href={% static "auth_app/css/authstyle.css" %}>
+{% endblock styleblock %}
+
+
+
+{% block mainpage %}
+<div class="form-container">
+  <div class="signup-main-container">
+    <h1>Log in your account</h1>
+    <form method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+      <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" placeholder="{{ field.label }}" {% if field.errors %}class="error"{% endif %}>
+      {% for error in field.errors %}
+      <p class="error-message">{{ error }}</p>
+      {% endfor %}
+      {% endfor %}
+      <p class='black'>Dont have an account? <a href="{% url 'signup' %}">Signup here</a></p>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+{% endblock mainpage %}
+
+{% block footer %}
+<!-- Your existing footer code -->
+{% endblock footer %}

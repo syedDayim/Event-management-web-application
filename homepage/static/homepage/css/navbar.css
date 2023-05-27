@@ -48,3 +48,7 @@
   margin-right: 10px;
   color: #919191;
 }
+.navbar > ul{
+  /* border:  2px solid red; */
+  margin-right: 12px;
+}

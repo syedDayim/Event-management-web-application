@@ -11,6 +11,7 @@
     <link rel="stylesheet" href={% static "homepage/css/navbar.css" %}>
     <link rel="stylesheet" href={% static "homepage/css/footer.css" %}>
     <link rel="stylesheet" href={% static "homepage/css/main-page.css" %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-hA1vEfxtwIocKrX6Mji/OAS0bLbFezP89jTmzyfhQbCTCxuYOefVWd9RTK6RrTc3o3iBwXYdQ1bfz7GJX+ugNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     
 {% comment %} 
@@ -32,11 +33,16 @@
 <body>
     <div class="container">
 
+        {% block nav %}
         {% include 'homepage/nav.html' %}
+        {% endblock nav %}
+        
         
         {% block mainpage %}This is homepage{% endblock mainpage %}
 
+        {% block footer %}
         {% include 'homepage/footer.html' %}
+        {% endblock footer %}
     </div>
 
     {% comment %} <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>

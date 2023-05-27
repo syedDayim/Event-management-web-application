@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'homepage',
     'events',
     'learn',
+    'auth_app',
 ]
 
 MIDDLEWARE = [

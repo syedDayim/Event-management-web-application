@@ -11,6 +11,7 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('learn/', include('learn.urls')),
     path('aboutus/', include('homepage.urls')),
+    path('auth/', include('auth_app.urls')),
 
 ]
 
