@@ -1,7 +1,7 @@
 /* Add the following code to your existing CSS file */
 
 .form-container {
-    border: 2px solid rgb(0, 255, 89);
+    /* border: 2px solid rgb(0, 255, 89); */
     margin-top: 90px;
     height: 60rem;
     width: 100%;
@@ -12,6 +12,19 @@
     margin-top: 10px;
     
 }
+.error-message {
+  color: red;
+  /* border: 2px solid red; */
+  margin-bottom: 12px;
+  width: 313px;
+}
+
+
+
+
+
+
+
 
 .signup-main-container {
     border-top: 5px solid blue;
@@ -80,15 +93,19 @@
   }
   
   .signup-main-container .error-message {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     color: red;
-  }
-
+    font-size: 14px;
+}
   .black{
     color: rgb(88, 88, 88)
   }
   .black > a{
     text-decoration: none;
+  }
+
+  .error{
+    margin-top: 12px;
   }
 
   
