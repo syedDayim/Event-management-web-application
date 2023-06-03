@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
-from .forms import SignUpForm
+from .forms import SignUpForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import authenticate, logout
@@ -49,10 +49,24 @@ def user_logout(request):
 
 def profile(request):
     if request.user.is_authenticated:
-        return render(request, 'auth_app/profile.html',{})
+        if request.method == 'POST':
+            u_form = UserUpdateForm(request.POST, instance=request.user)
+            p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+            if u_form.is_valid() and p_form.is_valid():
+                u_form.save()
+                p_form.save()
+                return redirect('profile')
+        else:
+            u_form = UserUpdateForm()
+            p_form = ProfileUpdateForm()
+        context = {
+            'u_form': u_form,
+            'p_form': p_form,
+        }
+        return render(request, 'auth_app/profile.html', context)
     else:
         return redirect('login')
-    
+   
 
 def user_change_password(request):
     if request.user.is_authenticated:

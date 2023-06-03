@@ -27,16 +27,19 @@
 
 
 .signup-main-container {
+    border: 1px solid #ccc;
     border-top: 5px solid blue;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 0px 0px 10px 10px;
-    
-    
-    width: 20%;
-    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: auto;
+    background-color: #FFFFFF;
     color: rgb(20, 39, 205);
     padding: 20px;
     position: relative;
@@ -110,6 +113,11 @@
 
   
 .content-section {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
     padding: 100px;
     margin-top: 90px;
     height: 100vh;
@@ -158,4 +166,59 @@
 .change-password {
   text-decoration: none;
   margin-top: 5px;
+}
+
+
+
+.custom-file-input{
+  margin-left: 80px; 
+}
+
+
+
+
+form {
+  margin-top: 20px;
+  max-width: 600px;
+  padding: 20px;
+  
+  background-color: #fff;
+  border-radius: 5px;
+}
+fieldset {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #17a2b8;
+  color: #17a2b8;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #17a2b8;
+  color: #fff;
 }

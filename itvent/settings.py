@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'homepage',
     'events',
     'learn',
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
