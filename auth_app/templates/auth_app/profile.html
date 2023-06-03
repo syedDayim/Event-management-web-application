@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Profile page
-    <h3>Welcome, {{ request.user.username }}</h3>
-    <a href="{% url 'logout' %}">Logout</a>
-    <a href="{% url 'changepassword' %}">Change password</a>
-</body>
-</html>
+{% extends 'homepage/base.html' %}
+
+{% load static %}
+{% block styleblock %}
+<link rel="stylesheet" href={% static "auth_app/css/authstyle.css" %}>
+{% endblock styleblock %}
+
+{% block mainpage %}
+    <div class="content-section">
+        <div class="media">
+            <img width="100" class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+                <a class="change-password" href="{% url 'changepassword' %}">Change password</a> 
+            </div>
+        </div>
+
+    </div>
+    
+{% endblock mainpage %}

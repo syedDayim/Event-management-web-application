@@ -109,4 +109,53 @@
   }
 
   
-  
+.content-section {
+    padding: 100px;
+    margin-top: 90px;
+    height: 100vh;
+}
+
+
+
+
+.content-section {
+  margin: 50px;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image stays within the circle */
+}
+
+.account-img {
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.media-body {
+  margin-left: 20px;
+}
+
+.account-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-secondary {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.change-password {
+  text-decoration: none;
+  margin-top: 5px;
+}
