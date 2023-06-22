@@ -67,18 +67,35 @@ def user_logout(request):
     return redirect('homepage')
 
 
+from django.contrib.auth.models import User
+from .models import Profile
+
 def profile(request):
     if request.user.is_authenticated:
+        user = request.user
+        profile = Profile.objects.filter(user=user).first()
         if request.method == 'POST':
-            u_form = UserUpdateForm(request.POST, instance=request.user)
-            p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+            u_form = UserUpdateForm(request.POST, instance=user)
+            if profile:
+                p_form = ProfileUpdateForm(request.POST, request.FILES, instance=profile)
+            else:
+                p_form = ProfileUpdateForm(request.POST, request.FILES)
             if u_form.is_valid() and p_form.is_valid():
                 u_form.save()
-                p_form.save()
+                if p_form.instance:
+                    p_form.instance.user = user
+                    p_form.save()
+                else:
+                    profile = p_form.save(commit=False)
+                    profile.user = user
+                    profile.save()
                 return redirect('profile')
         else:
             u_form = UserUpdateForm()
-            p_form = ProfileUpdateForm()
+            if profile:
+                p_form = ProfileUpdateForm(instance=profile)
+            else:
+                p_form = ProfileUpdateForm()
         context = {
             'u_form': u_form,
             'p_form': p_form,

@@ -30,11 +30,13 @@ class SignUpForm(UserCreationForm):
 class UserUpdateForm(forms.ModelForm):
     username = forms.CharField(
         widget=forms.TextInput(attrs={'placeholder': 'Username'}),
-        label=''
+        label='',
+        required=False
     )
     email = forms.EmailField(
         widget=forms.EmailInput(attrs={'placeholder': 'Email'}),
-        label=''
+        label='',
+        required=False
     )
 
     class Meta:
