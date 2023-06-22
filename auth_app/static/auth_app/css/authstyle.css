@@ -146,10 +146,13 @@
 }
 
 
-
+body{
+  background-color: rgba(76, 171, 180, 0.352);
+}
 
 .content-section {
   margin: 50px;
+  /* border: 2px solid red; */
 }
 
 .media {
