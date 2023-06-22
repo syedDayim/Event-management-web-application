@@ -1,17 +1,39 @@
 /* Add the following code to your existing CSS file */
 
-.form-container {
-    /* border: 2px solid rgb(0, 255, 89); */
-    margin-top: 90px;
-    height: 60rem;
-    width: 100%;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    
+.form-container2 {
+  /* border: 2px solid rgb(221, 31, 21); */
+  margin-top: 90px;
+  height: 60rem;
+  width: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
 }
+
+
+.form-container {
+  /* border: 2px solid rgb(0, 255, 89); */
+  margin-top: 90px;
+  height: 60rem;
+  width: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-image: url("/static/auth_app/images/pic10.jpg");
+    /* Additional background properties */
+  background-repeat: no-repeat;
+  background-size: cover;
+    /* Adjust the background position if needed */
+  background-position: center;
+
+}
+
+
 .error-message {
   color: red;
   /* border: 2px solid red; */
