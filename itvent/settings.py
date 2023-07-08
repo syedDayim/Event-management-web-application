@@ -141,8 +141,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_USER = 'shahdaim58@gmail.com'
 EMAIL_PASS = 'matnobdujajyzshm'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -150,3 +150,12 @@ EMAIL_HOST_USER = 'shahdaim58@gmail.com'
 EMAIL_HOST_PASSWORD = EMAIL_PASS
 
 DEFAULT_FROM_EMAIL = "ITvents Team <noreply@itvents.com>"
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/auth/login/'
