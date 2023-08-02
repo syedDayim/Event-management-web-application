@@ -1,0 +1,51 @@
+{% extends  'homepage/base.html' %}
+{% load static %}
+
+{% block mainpage %}
+
+
+<div class="main-div" style="margin-top: 90px; padding-bottom: 90px; height: auto; background-color: #212121;">
+    <form method="post" enctype="multipart/form-data" class="upload-form">
+    <div class="uploadpaper">
+        <h1 style="color:rgb(221, 83, 83); padding-bottom: 25px;">Submit your paper below</h1>
+    </div>
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Paper</button>
+    </form>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Paper Title</th>
+                    <th>Submitted Paper</th>
+                    <th>Status</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for paper in user_papers %}
+                <tr>
+                    <td>{{ paper.title }}</td>
+                    <td>
+                        {% if paper.pdf %}
+                        <a style="text-decoration: none; color: rgb(100, 240, 250);" href="{{ paper.pdf.url }}" target="_blank">view</a>
+                        {% else %}
+                        No paper submitted
+                        {% endif %}
+                    </td>
+                    {% if paper.percentage %}
+                    <td>{{ paper.percentage }}%</td>
+
+                    {% else %}
+                    <td style="color: rgb(195, 228, 8);"> Awaited </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock mainpage %}

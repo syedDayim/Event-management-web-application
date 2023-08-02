@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div class="module">
+    <h2>{{ title }}</h2>
+    <form method="post" enctype="multipart/form-data" action="{% url 'admin:papers_paper_changelist' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="apply" value="1">Apply</button>
+    </form>
+</div>
+{% endblock %}
